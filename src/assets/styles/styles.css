@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+}
+
+span {
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+.signup-body {
+    background-image: url(../images/signup.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.login-body {
+    background-image: url(../images/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    opacity: 0.3;
+    position: absolute;
+    top: -32px;
+    right: 0px;
+    bottom: 0px;
+    left: -8px;
+    margin: 0px;
+    padding: 0px;
+    z-index: -1;
+    background-color: rgb(10, 10, 10);
+}
+
+.invisible-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100vh;
+}
+
+.signup-main-box {
+    position: fixed;
+    padding: 2rem;
+    background-color: rgba(25, 102, 87, 0.267);
+    border-radius: 10px;
+    color: #000f11;
+    overflow: hidden;
+}
+
+.login-main-box {
+    position: fixed;
+    padding: 2rem;
+    background-color: rgba(25, 102, 87, 0.267);
+    border-radius: 10px;
+    color: rgb(238, 250, 219);
+    overflow: hidden;
+}
+
+.shining {
+    width: 2000px;
+    height: 10rem;
+    background: rgb(24,102,87);
+    background: linear-gradient(0deg, rgba(24,102,87,0.267) 0%, rgba(198,255,244,0.267) 50%, rgba(24,102,87,0.267) 100%);
+    position: absolute;
+    top: 0rem;
+    left: -50rem;
+    animation-duration: 1290ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+@keyframes action-shineIn {
+    0% {
+        transform: translate(-700px, -700px) rotate(-52deg) skew(-2deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(-52deg) skew(-2deg);
+    }
+}
+
+@keyframes action-shineOut {
+    0% {
+        transform: translate(0px, 0px) rotate(-52deg) skew(-2deg);
+    }
+    100% {
+        transform: translate(700px, 700px) rotate(-52deg) skew(-2deg);
+    }
+}
+
+.form-box {   
+    margin: 2rem;
+    margin-bottom: 6.3rem;
+    text-align: center;
+}
+
+.form-box h1 {
+    font-family: 'Baloo Bhaina 2', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.7em;
+    margin: 0px;
+    margin-bottom: 2rem;
+    padding: 0px;
+}
+
+.form {
+    text-align: left;
+    font-family: 'Short Stack', cursive;
+}
+
+.form p{
+    margin: 0.5em 0px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.form input {
+    width: 100%;
+    border-radius: 3px;
+    z-index: 2;
+    background-color: rgb(242, 232, 253);
+    border: 1px solid #000f11;
+}
+
+.back-up-layout {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.7rem;
+    font-family: 'Londrina Shadow', cursive;
+    font-size: 1.7rem;
+    will-change: transform;
+}
+
+.back-up-layout p {
+    margin: 0rem;
+    transition-duration: 700ms;
+    transition-timing-function: ease-out;
+    will-change: transform;
+}
+
+.back-up-layout:hover p {
+    transform: scale(1.07);
+    will-change: transform;
+}
+
+.photo-authors {
+    text-decoration: none;
+    color: khaki;
+}
+
+.photo-authors:visited {
+    color: #003339;
+}
+
+.back-down-layout {
+    position: absolute;
+    bottom: -0.3rem;
+    right: 4.5rem;
+    color: #000f11c7;
+}
+
+.btn-login,
+.btn-signup {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #003339de;
+    outline: none;
+    position: absolute;
+    left: 35%;
+    bottom: 3rem;
+    background-color: #003339de;
+    color: rgb(238, 250, 219);
+    font-size: 1em;
+    font-family: 'Baloo Bhaina 2', Arial, sans-serif;
+    transition-duration: 0.7s;
+    transition-timing-function: cubic-bezier(.7,.48,0,0);
+}
+
+.btn-login
+.btn-signup:hover {
+    background-color: #001c1fde;
+    border: 1px solid rgb(238, 250, 219);
+}
+
+@media screen and (min-width: 2500px) { 
+    .signup-main-box {
+        height: 60vh;
+        padding: 4rem;
+    }
+    
+    .shining {
+        height: 14rem;
+        animation-duration: 0.9s;
+    }
+
+    .form-box h1 {
+        font-size: 4em;
+    }
+
+    .form p{
+        font-size: 2.1em;
+    }
+    
+    .form input {
+        width: 100%;
+        height: 2em;
+    }
+
+    .btn-signup {
+        left: 40%;
+        bottom: 6rem;
+        font-size: 2.1em;
+    }
+
+    .btn-login {
+        left: 40%;
+        bottom: 2rem;
+        font-size: 2.1em;
+    }
+}
+
+/* Google fonts */
+@font-face {
+    font-family: 'Baloo Bhaina 2';
+    src:  url('../fonts/Baloo_Bhaina_2/BalooBhaina2-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Short Stack';
+    src:  url('../fonts/Short_Stack/ShortStack-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Londrina Shadow';
+    src:  url('../fonts/Londrina_Shadow/LondrinaShadow-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Project icons */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?1bliob');
+    src:  url('../fonts/icomoon.eot?1bliob#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?1bliob') format('truetype'),
+      url('../fonts/icomoon.woff?1bliob') format('woff'),
+      url('../fonts/icomoon.svg?1bliob#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 2rem;
+    text-transform: none;
+    line-height: 3;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }   
+  
+  .icon-info:before {
+    content: "\ea0c";
+  }
+  
