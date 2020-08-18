@@ -1,0 +1,22 @@
+@import 'variables';
+
+.navbar {
+    margin: inherit;
+    padding: inherit;
+    width: inherit;
+    background-color:$dark-as;
+    border-top: 1px solid $pearl-as;
+}
+
+.nav-list {
+    margin: inherit;
+    padding: 1.5rem 0rem;
+    width: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.list-item {
+    color: $pearl-as;
+}

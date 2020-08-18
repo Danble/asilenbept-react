@@ -2,6 +2,10 @@ import React from 'react'
 import '../assets/styles/styles.css'
 
 class Signup extends React.Component {
+  
+  componentDidMount() {
+    window.$shining()
+  }
 
   render() {
     return (
@@ -12,7 +16,7 @@ class Signup extends React.Component {
                 <p><a className="photo-authors" href="https://unsplash.com/@simonrae" rel="noopener noreferrer" target="_blank">Simon Rae</a></p>
             </div>
             <div className="signup-main-box">
-                <div></div>
+                <div id="shine"></div>
                 <div className="form-box">
                     <h1><span>Registro para</span> Asilenbept</h1>
                     <div className="form">

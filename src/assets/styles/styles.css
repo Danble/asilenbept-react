@@ -167,13 +167,15 @@ span {
 
 .btn-login,
 .btn-signup {
+    width: auto;
+    height: auto;
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
     border: 1px solid #003339de;
     outline: none;
     position: absolute;
-    left: 35%;
-    bottom: 3rem;
+    left: 31%;
+    bottom: 1rem;
     background-color: #003339de;
     color: rgb(238, 250, 219);
     font-size: 1em;
@@ -182,7 +184,7 @@ span {
     transition-timing-function: cubic-bezier(.7,.48,0,0);
 }
 
-.btn-login
+.btn-login:hover,
 .btn-signup:hover {
     background-color: #001c1fde;
     border: 1px solid rgb(238, 250, 219);

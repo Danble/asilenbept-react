@@ -1,0 +1,240 @@
+.main {
+  margin: inherit;
+  padding: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+/*TODO change width for medium and small screens*/
+.main-image {
+  margin: inherit;
+  padding: inherit;
+  width: inherit;
+  height: 100vh;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: -1;
+  background-image: url(../images/mainAs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition-property: top;
+  transition-property: top;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+/* Main Asilenbept colors */
+/* Secondary Asilenbept colors */
+.navbar {
+  margin: inherit;
+  padding: inherit;
+  width: inherit;
+  background-color: #000F15;
+  border-top: 1px solid #FFFF9F;
+}
+
+.nav-list {
+  margin: inherit;
+  padding: 1.5rem 0rem;
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.list-item {
+  color: #FFFF9F;
+}
+
+.main-content {
+  margin: inherit;
+  padding: inherit;
+  width: inherit;
+  position: absolute;
+  top: 70vh;
+  background-color: #fff;
+}
+
+/* Main Asilenbept colors */
+/* Secondary Asilenbept colors */
+.content {
+  margin: inherit;
+  padding: inherit;
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 78%;
+}
+
+.blog {
+  display: inherit;
+  margin: inherit;
+  width: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3em 2em;
+}
+
+#sidebar, .content {
+  height: 600px;
+  overflow: auto;
+  float: left;
+  -webkit-transition: width .76s;
+  transition: width .76s;
+}
+
+#sidebar {
+  background: #BABE99;
+  opacity: 1;
+  width: 22%;
+}
+
+#sidebar.collapsed {
+  width: 0;
+}
+
+#sidebar.collapsed + .content {
+  width: 100%;
+}
+
+.sidebar-list {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 2rem;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: black;
+  margin: 20px;
+  cursor: pointer;
+}
+
+/* Main Asilenbept colors */
+/* Secondary Asilenbept colors */
+footer {
+  display: -ms-grid;
+  display: grid;
+  margin: inherit;
+  padding: inherit;
+  width: inherit;
+  height: 30vh;
+  background-color: #000F15;
+  border-bottom: 1px solid #FFFF9F;
+}
+
+.main-footer {
+  display: inherit;
+  width: inherit;
+  -ms-grid-columns: 21rem 10rem 10rem;
+      grid-template-columns: 21rem 10rem 10rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.contact-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 3.2rem;
+  border-radius: 5px;
+  background-color: #FFFF9F;
+  opacity: 0.9;
+}
+
+.contact-area i {
+  font-size: 2em;
+  margin: 0rem 1rem;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?8hkiqn");
+  src: url("../fonts/icomoon.eot?8hkiqn#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?8hkiqn") format("truetype"), url("../fonts/icomoon.woff?8hkiqn") format("woff"), url("../fonts/icomoon.svg?8hkiqn#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e905";
+}
+
+.icon-tumblr:before {
+  content: "\e904";
+  color: #36465d;
+}
+
+.icon-slack:before {
+  content: "\e903";
+  color: #4a154b;
+}
+
+.icon-vk:before {
+  content: "\e902";
+  color: #4680c2;
+}
+
+.icon-twitter:before {
+  content: "\e901";
+  color: #1da1f2;
+}
+
+.icon-medium:before {
+  content: "\e900";
+}
+
+.icon-info:before {
+  content: "\ea0c";
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+}
+/*# sourceMappingURL=main.css.map */
