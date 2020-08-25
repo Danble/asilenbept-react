@@ -1,0 +1,62 @@
+@import 'variables';
+
+svg {
+  fill: none;
+}
+
+#asilenbept {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/asilenbept.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cube {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 20rem;
+  height: 20rem;
+  stroke: $white-as;
+  stroke-dasharray: 7px;
+  stroke-dashoffset: 14px;
+  animation: travel 1s linear infinite;
+}
+
+.square-line {
+  width: 7.6rem;
+  height: 0.1px;
+  stroke: $white-as;
+  transform: rotate(-39deg);
+  transform-box: fill-box;
+  stroke-width: 0.9px;
+  stroke-dasharray: 7px;
+  stroke-dashoffset: 16.4px;
+  animation: slash-travel 1s linear infinite;
+}
+
+/* .line {
+  stroke: $white-as;
+  stroke-width: 1px;
+  stroke-dasharray: 7px;
+  stroke-dashoffset: 14px;
+  animation: travel 1s linear infinite;
+} */
+
+@keyframes travel {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes slash-travel {
+  to {
+    stroke-dashoffset: 14;
+  }
+}

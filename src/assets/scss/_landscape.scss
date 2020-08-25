@@ -1,7 +1,7 @@
 .main {
     margin: inherit;
     padding: inherit;
-    width: 100%;
+    width: 100vw;
     height: inherit;
     position: relative;
 }
@@ -10,7 +10,7 @@
 .main-image {
     margin: inherit;
     padding: inherit;
-    width: inherit;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0rem;

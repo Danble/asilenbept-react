@@ -1,7 +1,7 @@
 .main {
   margin: inherit;
   padding: inherit;
-  width: 100%;
+  width: 100vw;
   height: inherit;
   position: relative;
 }
@@ -10,7 +10,7 @@
 .main-image {
   margin: inherit;
   padding: inherit;
-  width: inherit;
+  width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0rem;
@@ -27,6 +27,15 @@
 
 /* Main Asilenbept colors */
 /* Secondary Asilenbept colors */
+a {
+  text-decoration: none;
+  color: #FFFF9F;
+}
+
+a:hover {
+  color: #BABE99;
+}
+
 .navbar {
   margin: inherit;
   padding: inherit;
@@ -46,10 +55,6 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   list-style-type: none;
-}
-
-.list-item {
-  color: #FFFF9F;
 }
 
 .main-content {
@@ -231,10 +236,92 @@ footer {
   content: "\ea0c";
 }
 
+/* Main Asilenbept colors */
+/* Secondary Asilenbept colors */
+svg {
+  fill: none;
+}
+
+#asilenbept {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/asilenbept.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cube {
+  width: inherit;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.square {
+  width: 20rem;
+  height: 20rem;
+  stroke: #FBFBE9;
+  stroke-dasharray: 7px;
+  stroke-dashoffset: 14px;
+  -webkit-animation: travel 1s linear infinite;
+          animation: travel 1s linear infinite;
+}
+
+.square-line {
+  width: 7.6rem;
+  height: 0.1px;
+  stroke: #FBFBE9;
+  -webkit-transform: rotate(-39deg);
+          transform: rotate(-39deg);
+  transform-box: fill-box;
+  stroke-width: 0.9px;
+  stroke-dasharray: 7px;
+  stroke-dashoffset: 16.4px;
+  -webkit-animation: slash-travel 1s linear infinite;
+          animation: slash-travel 1s linear infinite;
+}
+
+/* .line {
+  stroke: $white-as;
+  stroke-width: 1px;
+  stroke-dasharray: 7px;
+  stroke-dashoffset: 14px;
+  animation: travel 1s linear infinite;
+} */
+@-webkit-keyframes travel {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes travel {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes slash-travel {
+  to {
+    stroke-dashoffset: 14;
+  }
+}
+
+@keyframes slash-travel {
+  to {
+    stroke-dashoffset: 14;
+  }
+}
+
 body {
   margin: 0px;
   padding: 0px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 /*# sourceMappingURL=main.css.map */
