@@ -288,18 +288,21 @@ svg {
           animation: slash-travel 1s linear infinite;
 }
 
-/* .line {
-  stroke: $white-as;
+.line {
+  stroke: #FBFBE9;
   stroke-width: 1px;
   stroke-dasharray: 7px;
   stroke-dashoffset: 14px;
-  animation: travel 1s linear infinite;
-} */
+  -webkit-animation: travel 1s linear infinite;
+          animation: travel 1s linear infinite;
+}
+
 @-webkit-keyframes travel {
   to {
     stroke-dashoffset: 0;
   }
 }
+
 @keyframes travel {
   to {
     stroke-dashoffset: 0;

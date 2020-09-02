@@ -41,13 +41,13 @@ svg {
   animation: slash-travel 1s linear infinite;
 }
 
-/* .line {
+.line {
   stroke: $white-as;
   stroke-width: 1px;
   stroke-dasharray: 7px;
   stroke-dashoffset: 14px;
   animation: travel 1s linear infinite;
-} */
+}
 
 @keyframes travel {
   to {
