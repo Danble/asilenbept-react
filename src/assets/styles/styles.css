@@ -45,11 +45,12 @@ span {
 
 .signup-main-box {
     position: fixed;
-    padding: 2rem;
+    max-height: 92%;
+    padding: 0rem 2rem;
     background-color: rgba(25, 102, 87, 0.267);
     border-radius: 10px;
     color: #000f11;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .login-main-box {
@@ -104,13 +105,13 @@ span {
     font-weight: 500;
     font-size: 1.7em;
     margin: 0px;
-    margin-bottom: 2rem;
     padding: 0px;
 }
 
 .form {
     text-align: left;
     font-family: 'Short Stack', cursive;
+    color:  #FBFBE9;
 }
 
 .form p{
@@ -172,9 +173,6 @@ span {
     border-radius: 5px;
     border: 1px solid #003339de;
     outline: none;
-    position: absolute;
-    left: 31%;
-    bottom: 1rem;
     background-color: #003339de;
     color: rgb(238, 250, 219);
     font-size: 1em;
@@ -224,6 +222,17 @@ span {
         bottom: 2rem;
         font-size: 2.1em;
     }
+}
+
+.inline > label,
+.inline > input {
+    display: inline;
+    width: auto;
+    font-size: 0.8em;
+}
+
+.user_type {
+    margin: 1rem 1.7rem;
 }
 
 /* Google fonts */
