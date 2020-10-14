@@ -9,11 +9,21 @@
 }
 
 .blog {
-    display: inherit;
+    display: block;
     margin: inherit;
     width: inherit;
     justify-content: center;
     padding: 3em 2em;
+}
+
+.story-title {
+    font-size: 2.2em;
+    font-style: italic;
+}
+
+.story-core {
+    font-size: 1.8em;
+    font-style: italic;
 }
 
 #sidebar, .content {

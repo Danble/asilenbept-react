@@ -1,10 +1,42 @@
+import axios from 'axios'
 import React from 'react'
 import '../assets/styles/styles.css'
 
 class Login extends React.Component {
 
+  state = {
+    nickname: null,
+    password: null
+  }
+
   componentDidMount() {
+    if (window.localStorage.getItem('Nickname')) {
+      window.location.replace('http://localhost:3000')
+    }
+
     window.$shining()
+  }
+
+  handleNickname = e => {
+    this.setState({nickname: e.target.value})
+  }
+
+  handlePassword = e => {
+    this.setState({password: e.target.value})
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+
+    axios.get(`http://localhost:8080/users/get?nickname=${this.state.nickname}&password=${this.state.password}`)
+    .then(res => {
+      console.log(res)
+      window.localStorage.setItem('Nickname', res.data.nickname)
+      window.location.replace('http://localhost:3000')
+    })
+    .catch(err => {
+      console.log(err)
+    })
   }
 
   render() {
@@ -21,10 +53,10 @@ class Login extends React.Component {
                     <h1><span>Ingresa a</span> Asilenbept</h1>
                     <div className="form">
                         <p>Usuario:</p>
-                        <input id="nickname" type="text" />
+                        <input id="nickname" type="text" onChange={this.handleNickname} />
                         <p>Contraseña:</p>
-                        <input id="password" type="password" />
-                        <button id="login-button" type="submit" className="btn-login"><span>Ingresar</span></button>
+                        <input id="password" type="password" onChange={this.handlePassword} />
+                        <button id="login-button" type="submit" className="btn-login" onClick={this.handleSubmit}><span>Ingresar</span></button>
                     </div>
                 </div>
             </div>

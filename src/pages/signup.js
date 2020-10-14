@@ -11,6 +11,14 @@ class Signup extends React.Component {
     email: null,
     password: null
   }
+  
+  componentDidMount() {
+    if (window.localStorage.getItem('Nickname')) {
+      window.location.replace('http://localhost:3000')
+    }
+  
+    window.$shining()
+  }
 
   handleChangeName = event => {
     this.setState({ name: event.target.value });
@@ -49,17 +57,18 @@ class Signup extends React.Component {
       description: ''
     };
 
-    axios.post(`http://localhost:8080/api/user`, { user }).then(res => {
-        console.log('is workinnn')
-        console.log(res);
-        console.log(res.data);
-      })
+    axios.post(`http://localhost:8080/users/post`, { user })
+    .then(res => {
+      console.log(res);
+      console.log(res.data);
+      window.localStorage.setItem('Nickname', user.nickname)
+      window.location.replace('http://localhost:3000')
+    })
+    .catch(err => {
+      console.log(err | 'Something went wrong!')
+    })
   }
   
-  componentDidMount() {
-    window.$shining()
-  }
-
   render() {
     return (
       <main className="signup-body">
