@@ -307,6 +307,45 @@ svg {
           animation: travel 1s linear infinite;
 }
 
+.button-compose {
+  position: absolute;
+  bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: double #1e6fa5;
+  width: 7rem;
+  height: 2.8rem;
+  border-radius: 4px;
+}
+
+.main-button {
+  position: absolute;
+  width: 7rem;
+  margin: 0;
+  height: 2.8rem;
+  background-color: #FBFBE9;
+  border-radius: 4px;
+  opacity: 0.07;
+}
+
+.button-compose > p {
+  font-size: 1.4em;
+  text-align: center;
+  width: inherit;
+  margin: 10px;
+  font-weight: bold;
+  color: #FBFBE9;
+}
+
+#A {
+  position: absolute;
+  height: 11.7rem;
+  opacity: 0;
+  -webkit-animation: turn-on 7s ease-in-out forwards;
+          animation: turn-on 7s ease-in-out forwards;
+}
+
 @-webkit-keyframes travel {
   to {
     stroke-dashoffset: 0;
@@ -328,6 +367,60 @@ svg {
 @keyframes slash-travel {
   to {
     stroke-dashoffset: 14;
+  }
+}
+
+@-webkit-keyframes turn-on {
+  22% {
+    opacity: 0.5;
+  }
+  26% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  34% {
+    opacity: 0;
+  }
+  36% {
+    opacity: 0.4;
+  }
+  39% {
+    opacity: 0.5;
+  }
+  48% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes turn-on {
+  22% {
+    opacity: 0.5;
+  }
+  26% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  34% {
+    opacity: 0;
+  }
+  36% {
+    opacity: 0.4;
+  }
+  39% {
+    opacity: 0.5;
+  }
+  48% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

@@ -3,7 +3,7 @@ import React from 'react'
 const Sidebar = () => {
 
   let signout = () => {
-    window.localStorage.removeItem('Nickname')
+    window.localStorage.clear()
     window.location.reload()
   }
 

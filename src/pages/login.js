@@ -10,7 +10,7 @@ class Login extends React.Component {
   }
 
   componentDidMount() {
-    if (window.localStorage.getItem('Nickname')) {
+    if (window.localStorage.getItem('Nickname') && window.localStorage.getItem('Nickname') !== typeof undefined) {
       window.location.replace('http://localhost:3000')
     }
 
