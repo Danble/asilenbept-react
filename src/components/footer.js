@@ -12,7 +12,20 @@ const Footer = () => {
             <i className="icon-github"></i>
             <i className="icon-tumblr"></i>
         </div>
-        <div className="copyright"></div>
+        <div className="others">
+          <div>
+            <p><strong>Aviso de privacidad</strong></p>
+          </div>
+          <div>
+          <p><strong>Tienda</strong></p>
+          </div>
+          <div>
+          <p><strong>Preguntas frecuentes</strong></p>       
+          </div>
+        </div>
+        <div className="copyright">
+          <p>Todos los derechos reservados - Asilenbept 2020</p>
+        </div>
       </div>
     </footer>
   )

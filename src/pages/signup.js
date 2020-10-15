@@ -13,7 +13,7 @@ class Signup extends React.Component {
   }
   
   componentDidMount() {
-    if (window.localStorage.getItem('Nickname')) {
+    if (window.localStorage.getItem('User')) {
       window.location.replace('http://localhost:3000')
     }
   
@@ -120,6 +120,9 @@ class Signup extends React.Component {
                         <button id="register-button" type="submit" className="btn-signup" onClick={this.handleSubmit}><span>Registrarse</span></button>
                     </div>
                 </form>
+            </div>
+            <div className="anchor-link">
+              <a href="http://localhost:3000/ingreso">Tengo cuenta</a>
             </div>
             <div className="back-down-layout">
                 <i className="icon-info"></i>

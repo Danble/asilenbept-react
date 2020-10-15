@@ -10,7 +10,7 @@ class Login extends React.Component {
   }
 
   componentDidMount() {
-    if (window.localStorage.getItem('Nickname') && window.localStorage.getItem('Nickname') !== typeof undefined) {
+    if (window.localStorage.getItem('User') && window.localStorage.getItem('User') !== typeof undefined) {
       window.location.replace('http://localhost:3000')
     }
 
@@ -30,8 +30,9 @@ class Login extends React.Component {
 
     axios.get(`http://localhost:8080/users/get?nickname=${this.state.nickname}&password=${this.state.password}`)
     .then(res => {
-      console.log(res)
-      window.localStorage.setItem('Nickname', res.data.nickname)
+      console.log(res.data)
+      //TODO This is terrible! We need to use JWT Tokens instead.
+      window.localStorage.setItem('User', JSON.stringify(res.data))
       window.location.replace('http://localhost:3000')
     })
     .catch(err => {
@@ -59,6 +60,9 @@ class Login extends React.Component {
                         <button id="login-button" type="submit" className="btn-login" onClick={this.handleSubmit}><span>Ingresar</span></button>
                     </div>
                 </div>
+            </div>
+            <div className="anchor-link">
+              <a href="http://localhost:3000/registro">Registrarme</a>
             </div>
             <div className="back-down-layout">
                 <i className="icon-info"></i>

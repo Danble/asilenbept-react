@@ -53,7 +53,7 @@ svg {
   position: absolute;
   bottom: 40px;
   display: flex;
-  border: double #1e6fa5;;
+  border: 1px solid #1e6fa5;
   width: 7rem;
   height: 2.8rem;
   border-radius: 4px;
@@ -67,6 +67,22 @@ svg {
   background-color: $white-as;
   border-radius: 4px;
   opacity: 0.07;
+}
+
+.button-compose:hover .main-button {
+  opacity: 0.12;
+}
+
+.button-compose:hover > p {
+  color: $pearl-as;
+}
+
+.button-compose:hover {
+  border: double #1e6fa5;
+}
+
+.button-compose:active .main-button {
+  opacity: 0.22;
 }
 
 .button-compose > p {

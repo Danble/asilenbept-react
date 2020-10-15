@@ -34,7 +34,9 @@
 }
 
 #sidebar {
-  background: $gray-as;
+  background: url('../images/sidebar_alt2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   opacity: 1;
   width: 22%;
 }
@@ -53,6 +55,13 @@
     flex-direction: column;
     justify-content: space-evenly;
     margin-left: 2rem;
+}
+
+.sidebar-items {
+    padding: 0.7em;
+    background-color: $pearl-as;
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 button {

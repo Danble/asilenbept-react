@@ -235,6 +235,14 @@ span {
     margin: 1rem 1.7rem;
 }
 
+.anchor-link {
+    position: absolute;
+    right: 1.4rem;
+    top: 1rem;
+    border: 1px solid wheat;
+    padding: 0.35rem
+}
+
 /* Google fonts */
 @font-face {
     font-family: 'Baloo Bhaina 2';

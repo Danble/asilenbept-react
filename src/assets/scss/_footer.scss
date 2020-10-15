@@ -5,7 +5,7 @@ footer {
     margin: inherit;
     padding: inherit;
     width: inherit;
-    height: 30vh;
+    height: 34vh;
     background-color: $dark-as;
     border-bottom: 1px solid $pearl-as;
 }
@@ -13,6 +13,7 @@ footer {
 .main-footer {
     display: inherit;
     width: inherit;
+    height: 21vh;
     grid-template-columns: 21rem 10rem 10rem;
     justify-content: space-around;
     align-content: space-around;
@@ -32,4 +33,47 @@ footer {
 .contact-area i {
     font-size: 2em;
     margin: 0rem 1rem;
+}
+
+.others {
+    width: 45vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.others > div > p {
+    text-align: center;
+    color: $gray-as;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0.1rem;
+    width: 100%;
+    padding: 1px 0px;
+    font-size: 0.8em;
+    text-align: center;
+    color: $gray-as;
+    background-color: $red-as;
+}
+
+@media screen and (max-width: 815px) {
+    .main-footer {
+        display: block;
+    }
+
+    .contact-area {
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .others {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 439px) {
+    .contact-area > i {
+        margin: 0px 3px
+    }
 }

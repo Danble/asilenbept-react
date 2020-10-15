@@ -107,7 +107,9 @@ a:hover {
 }
 
 #sidebar {
-  background: #BABE99;
+  background: url("../images/sidebar_alt2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   opacity: 1;
   width: 22%;
 }
@@ -135,6 +137,13 @@ a:hover {
   margin-left: 2rem;
 }
 
+.sidebar-items {
+  padding: 0.7em;
+  background-color: #FFFF9F;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 button {
   width: 30px;
   height: 30px;
@@ -154,7 +163,7 @@ footer {
   margin: inherit;
   padding: inherit;
   width: inherit;
-  height: 30vh;
+  height: 34vh;
   background-color: #000F15;
   border-bottom: 1px solid #FFFF9F;
 }
@@ -162,6 +171,7 @@ footer {
 .main-footer {
   display: inherit;
   width: inherit;
+  height: 21vh;
   -ms-grid-columns: 21rem 10rem 10rem;
       grid-template-columns: 21rem 10rem 10rem;
   -ms-flex-pack: distribute;
@@ -189,6 +199,51 @@ footer {
 .contact-area i {
   font-size: 2em;
   margin: 0rem 1rem;
+}
+
+.others {
+  width: 45vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.others > div > p {
+  text-align: center;
+  color: #BABE99;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0.1rem;
+  width: 100%;
+  padding: 1px 0px;
+  font-size: 0.8em;
+  text-align: center;
+  color: #BABE99;
+  background-color: #4F0000;
+}
+
+@media screen and (max-width: 815px) {
+  .main-footer {
+    display: block;
+  }
+  .contact-area {
+    width: 100vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .others {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 439px) {
+  .contact-area > i {
+    margin: 0px 3px;
+  }
 }
 
 @font-face {
@@ -313,7 +368,7 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: double #1e6fa5;
+  border: 1px solid #1e6fa5;
   width: 7rem;
   height: 2.8rem;
   border-radius: 4px;
@@ -327,6 +382,22 @@ svg {
   background-color: #FBFBE9;
   border-radius: 4px;
   opacity: 0.07;
+}
+
+.button-compose:hover .main-button {
+  opacity: 0.12;
+}
+
+.button-compose:hover > p {
+  color: #FFFF9F;
+}
+
+.button-compose:hover {
+  border: double #1e6fa5;
+}
+
+.button-compose:active .main-button {
+  opacity: 0.22;
 }
 
 .button-compose > p {

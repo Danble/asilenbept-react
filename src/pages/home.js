@@ -1,5 +1,5 @@
 import React from 'react'
-import axios from 'axios'
+//import axios from 'axios'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import Sidebar from '../components/sidebar'
@@ -14,10 +14,9 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    if (!window.localStorage.getItem('Nickname') || window.localStorage.getItem('Nickname') === typeof undefined) {
+    if (!window.localStorage.getItem('User') || window.localStorage.getItem('User') === typeof undefined) {
       window.location.replace('http://localhost:3000/ingreso')
     }
-    console.log(window.localStorage.getItem('Nickname') === typeof undefined)
 
     this.getStories()
 
@@ -48,13 +47,8 @@ class Home extends React.Component {
   }
 
   getStories = () => {
-    axios.get('http://localhost:8080/stories/getall')
-    .then(res => {
-      this.setState({stories: res.data})
-    })
-    .catch(err => {
-      console.log(err)
-    })
+    const user = JSON.parse(window.localStorage.getItem('User'))
+    this.setState({stories: user.stories})
   }
 
   toggleButton = () => {
